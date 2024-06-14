@@ -9,16 +9,18 @@ export default function Main(props) {
 
     return (
         <>
-            <div className="imgContainer">
-                <img
-                    loading="eager"
-                    src={data?.url}
-                    srcSet={`${data?.url} 1280w, ${data?.hdurl} 1920w`}
-                    alt={data?.title}
-                    className="bgImage"
-                    onLoad={imageLoaded}
-                />
-            </div>
+            {data && (
+                <div className="imgContainer">
+                    <img
+                        loading="eager"
+                        src={data?.url}
+                        srcSet={`${data?.url} 1280w, ${data?.hdurl} 1920w`}
+                        alt={data?.title}
+                        className="bgImage"
+                        onLoad={imageLoaded}
+                    />
+                </div>
+            )}
             {loading && (
                 <div className="loadingState">
                     <i className="fa-solid fa-gear"></i>
