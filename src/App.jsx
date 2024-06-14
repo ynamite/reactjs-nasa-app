@@ -23,7 +23,6 @@ function App() {
             const today = new Date().toDateString();
             const localKey = `apodData-${today}`;
             const localData = localStorage.getItem(localKey);
-            console.log('localData:', localData);
             if (localData) {
                 setData(JSON.parse(localData));
                 console.log('Data loaded from local storage');
