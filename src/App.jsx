@@ -20,6 +20,7 @@ function App() {
             const url =
                 'https://api.nasa.gov/planetary/apod' +
                 `?api_key=${NASA_API_KEY}`;
+            console.log(url);
             const today = new Date().toDateString();
             const localKey = `apodData-${today}`;
             const localData = localStorage.getItem(localKey);
